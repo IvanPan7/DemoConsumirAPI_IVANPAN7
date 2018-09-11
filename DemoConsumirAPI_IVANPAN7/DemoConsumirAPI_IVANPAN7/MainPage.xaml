@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:DemoConsumirAPI_IVANPAN7"
+             x:Class="DemoConsumirAPI_IVANPAN7.MainPage">
+
+    <ScrollView>
+        <StackLayout>
+            <ListView x:Name="MyListView">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Vertical" Padding="8,0,8,0">
+                                <Label Text="{Binding name}" TextColor="#000" FontSize="14" LineBreakMode="TailTruncation" />
+                                <Label Text="{Binding shortDescription}" TextColor="#000" LineBreakMode="TailTruncation" />
+                            </StackLayout>
+                        </ViewCell>
+                        
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <StackLayout Orientation="Horizontal">
+                <Button Text="Agregar" Clicked="OnAdd"></Button>
+                <Button HorizontalOptions="CenterAndExpand" Text="Actualizar" Clicked="OnUpdate"></Button>
+                <Button Text="Eliminar" Clicked="OnDelete"></Button>
+                
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>
